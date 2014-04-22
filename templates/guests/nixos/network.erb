@@ -1,0 +1,7 @@
+{ config, ... }:
+
+{
+  <% options.each do |i, n| %>
+  networking.interfaces.eth<%= i %> = <%= n %>
+  <% end %>
+}
